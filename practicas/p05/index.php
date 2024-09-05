@@ -127,4 +127,29 @@ echo '<br>';
 echo 'Valor de $f: ';
 var_dump($f); 
 echo '<br>';
+
+# EJERCICIO 7
+
+echo '<br>';
+if (isset($_SERVER['SERVER_SOFTWARE'])) {
+    echo 'Versión de Apache: ' . $_SERVER['SERVER_SOFTWARE'] . '<br>';
+} else {
+    echo 'No se pudo determinar la versión de Apache.<br>';
+}
+
+echo 'Versión de PHP: ' . phpversion() . '<br>';
+
+
+if (isset($_SERVER['SERVER_SOFTWARE'])) {
+    echo 'Nombre del sistema operativo del servidor: ' . php_uname() . '<br>';
+} else {
+    echo 'No se pudo determinar el nombre del sistema operativo del servidor.<br>';
+}
+
+
+if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    echo 'Idioma del navegador (cliente): ' . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . '<br>';
+} else {
+    echo 'No se pudo determinar el idioma del navegador.<br>';
+}
 ?>
