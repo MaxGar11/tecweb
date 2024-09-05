@@ -80,4 +80,17 @@ echo 'Valor de $c: ' . $c . '<br>';
 echo 'Valor de $z: ';
 print_r($z);
 echo '<br>';
+
+# EJERCICIO 5
+
+$a = "7 personas";
+$b = (integer) $a;
+$a = "9E3";
+$c = (double) $a;
+
+echo '<br>';
+echo 'Valor de $a: ' . $a . '<br>'; 
+echo 'Valor de $b: ' . $b . '<br>'; 
+echo 'Valor de $c: ' . $c . '<br>'; 
+
 ?>
