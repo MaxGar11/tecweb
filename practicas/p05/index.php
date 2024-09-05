@@ -55,4 +55,29 @@ echo '<br>';
 $z[0] = "MySQL";
 print_r($z);
 echo '<br>';
+echo '<br>';
+
+# EJERCICIO 4
+
+global $a, $b, $c, $z;
+
+echo 'Valor de $a en E3: ' . $a . '<br>';
+echo 'Valor de $b en E3: ' . $b . '<br>';
+echo 'Valor de $c en E3: ' . $c . '<br>';
+echo 'Valor de $z en E3: ';
+print_r($z);
+echo '<br>';
+
+$a = "N4";
+$b = "N4";
+$c = 500;
+$z[0] = "MySQL2";
+
+echo '<br>';
+echo 'Valor de $a: ' . $a . '<br>';
+echo 'Valor de $b: ' . $b . '<br>';
+echo 'Valor de $c: ' . $c . '<br>';
+echo 'Valor de $z: ';
+print_r($z);
+echo '<br>';
 ?>
