@@ -32,4 +32,27 @@ $b = &$a;
 echo $a. '<br>';
 echo $b. '<br>';
 
+# EJERCICIO 3
+echo '<br>';
+$a = "PHP5";
+print_r($a);
+echo '<br>';
+$z[] = &$a;
+print_r($z);
+echo '<br>';
+$b = "5a version de PHP";
+print_r($b);
+echo '<br>';
+$c = $b*10;
+print_r($c);
+echo '<br>';
+$a .= $b;
+print_r($a);
+echo '<br>';
+$b *= $c;
+print_r($b);
+echo '<br>';
+$z[0] = "MySQL";
+print_r($z);
+echo '<br>';
 ?>
