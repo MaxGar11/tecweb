@@ -93,4 +93,38 @@ echo 'Valor de $a: ' . $a . '<br>';
 echo 'Valor de $b: ' . $b . '<br>'; 
 echo 'Valor de $c: ' . $c . '<br>'; 
 
+# EJERCICIO 6
+
+# definicion variables
+$a = false;  
+$b = true;            
+$c = false;             
+$d = false;             
+$e = true;          
+$f = true;
+
+echo '<br>';
+echo 'Valor de $a: ';   
+var_dump($a); 
+echo '<br>';
+
+echo 'Valor de $b: ';
+var_dump($b); 
+echo '<br>';
+
+echo 'Valor de $c: ';
+var_dump($c); 
+echo '<br>';
+
+echo 'Valor de $d: ';
+var_dump($d); 
+echo '<br>';
+
+echo 'Valor de $e: ';
+var_dump($e); 
+echo '<br>';
+
+echo 'Valor de $f: ';
+var_dump($f); 
+echo '<br>';
 ?>
