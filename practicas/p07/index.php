@@ -48,6 +48,44 @@
     ?>
 
 
+    <h2>Ejercicio 3.1</h2>
+    <p>Utiliza un ciclo while para encontrar el primer número entero obtenido aleatoriamente,
+    pero que además sea múltiplo de un número dado.</p>
+    <form action="http://localhost/tecweb/practicas/p07/index.php" method="get">
+        Número:<input type="text" name="number"><br>
+        <input type="submit" value="Crear">
+    </form>
+    <br>
+    <?php
+    include_once 'C:\xampp\htdocs\tecweb\practicas\p07\src\funciones.php';
+        if(isset($_GET['number']))
+        {
+            $number = $_GET['number'];
+            $numero_correcto = multiploaleatorio1($number);
+            echo "<pre>";
+            print_r($numero_correcto);
+            echo "<pre>";
+        }
+    ?>
+
+<h2>Ejercicio 3.2</h2>
+    <p>Crear una variante de este script utilizando el ciclo do-while.</p>
+    <form action="http://localhost/tecweb/practicas/p07/index.php" method="get">
+        Otro Número:<input type="text" name="number1"><br>
+        <input type="submit" value="Crear">
+    </form>
+    <?php
+    include_once 'C:\xampp\htdocs\tecweb\practicas\p07\src\funciones.php';
+        if(isset($_GET['number1']))
+        {
+            $number = $_GET['number1'];
+            $numero_correcto = multiploaleatorio2($number);
+            echo "<pre>";
+            print_r($numero_correcto);
+            echo "<pre>";
+        }
+    ?>
+
     <h2>Ejemplo de POST</h2>
     <form action="http://localhost/tecweb/practicas/p07/index.php" method="post">
         Name: <input type="text" name="name"><br>

@@ -39,4 +39,22 @@
     return $valores;
     }
 
+    function multiploaleatorio1($number){
+
+        $numero_random = rand(0,99);
+        while(($numero_random%$number != 0)){        
+        $numero_random = rand(0,99);
+    }
+    return $numero_random;
+    }
+
+    function multiploaleatorio2($number){
+
+        do {
+            $numero_random = rand(0,999);
+        } while ($numero_random%$number != 0);
+    
+    return $numero_random;
+    }
+
 ?>
