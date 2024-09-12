@@ -86,6 +86,38 @@
         }
     ?>
 
+    <h2>Ejercicio 4</h2>
+    <p>Crear un arreglo cuyos índices van de 97 a 122 y cuyos valores son las letras de la ‘a’
+    a la ‘z’. Usa la función chr(n) que devuelve el caracter cuyo código ASCII es n para poner
+    el valor en cada índice.</p>
+    <br>
+    <?php
+    include_once 'C:\xampp\htdocs\tecweb\practicas\p07\src\funciones.php';
+    
+        $arreglo = arregloletras();
+        echo '<?xml version="1.0" encoding="UTF-8"?>';
+        echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">';
+        echo '<html xmlns="http://www.w3.org/1999/xhtml">';
+        echo '<head>';
+        echo '<title>Tabla con Arreglo</title>';
+        echo '</head>';
+        echo '<body>';
+
+        echo '<table border="1">';
+
+        foreach ($arreglo as $key => $value) {
+       
+           echo '<tr>';
+           echo '<td>' . $key . '</td>';
+           echo '<td>' . $value . '</td>';
+          echo '</tr>';
+        }
+
+        echo '</table>';
+        echo '</body>';
+        echo '</html>';
+    ?>
+
     <h2>Ejemplo de POST</h2>
     <form action="http://localhost/tecweb/practicas/p07/index.php" method="post">
         Name: <input type="text" name="name"><br>
