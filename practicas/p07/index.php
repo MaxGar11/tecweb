@@ -68,7 +68,7 @@
         }
     ?>
 
-<h2>Ejercicio 3.2</h2>
+    <h2>Ejercicio 3.2</h2>
     <p>Crear una variante de este script utilizando el ciclo do-while.</p>
     <form action="http://localhost/tecweb/practicas/p07/index.php" method="get">
         Otro Número:<input type="text" name="number1"><br>
@@ -116,6 +116,51 @@
         echo '</table>';
         echo '</body>';
         echo '</html>';
+    ?>
+
+    <h2>Ejercicio 5</h2>
+    <p>Usar las variables $edad y $sexo en una instrucción if para identificar una persona de
+    sexo “femenino”, cuya edad oscile entre los 18 y 35 años y mostrar un mensaje de
+    bienvenida apropiado.</p>
+    <form action="http://localhost/tecweb/practicas/p07/index.php" method="get">
+        Edad:<input type="text" name="edad"><br>
+        <br>
+        Sexo: <select name="base">
+            <option value="Error">Seleccionar-</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select> <br>
+        <br>
+        <input type="submit" value="Aceptar">
+    </form>
+    
+    <?php
+    include_once 'C:\xampp\htdocs\tecweb\practicas\p07\src\funciones.php';
+        if (isset($_GET['base']) && isset($_GET['edad'])){
+            $edad = $_GET['edad'];
+            $sexo = $_GET['base'];
+
+            $valor = identifypersona($edad,$sexo);
+            
+            if($valor == TRUE){
+                $mensaje = "Bienvenida, usted está en el rango de edad permitido";
+            }else if($valor == FALSE) 
+            {
+                $mensaje = "Usted no está en el rango";
+            }
+
+            echo '<?xml version="1.0" encoding="UTF-8"?>';
+            echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">';
+            echo '<html xmlns="http://www.w3.org/1999/xhtml">';
+            echo '<head>';
+            echo '<title>Resultado</title>';
+            echo '</head>';
+            echo '<body>';
+            echo '<h1>' . htmlspecialchars($mensaje) . '</h1>';
+            echo '</body>';
+            echo '</html>'; 
+        }
+ 
     ?>
 
     <h2>Ejemplo de POST</h2>

@@ -66,4 +66,14 @@
 
         return $arreglo;
     }
+
+    function identifypersona($edad, $sexo)
+    {
+        if($sexo == "Femenino" && ($edad >= 18 && $edad <= 35)){
+            return TRUE;
+        }else 
+        {
+            return FALSE;
+        }
+    }
 ?>
