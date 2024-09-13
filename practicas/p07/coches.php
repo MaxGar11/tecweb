@@ -210,10 +210,15 @@ function Carros() {
 
     <h1>Parque Vehicular</h1>
 
+    <h2>Ejercicio 6</h2>
+    <p>Crea en código duro un arreglo asociativo que sirva para registrar el parque vehicular de
+    una ciudad. Cada vehículo debe ser identificado por: Matrícula, Auto, Propietario. La matrícula debe tener el siguiente formato LLLNNNN, donde las L pueden ser letras de
+    la A-Z y las N pueden ser números de 0-9.</p>
+
     <form action= "coches.php" method="post">
         <label for="matricula">Consulta de auto por Matrícula:</label>
         <input type="text" id="matricula" name="matricula" required>
-        <button type="submit" name="consulta" value="matricula">Consultar</button>
+        <button type="submit" name="consulta" value="matricula">Buscar</button>
     </form>
 
     <form method="post" action="">

@@ -76,4 +76,13 @@
             return FALSE;
         }
     }
+
+    function GenerarMatricula(){
+        $letras = '';
+        for ($i=0; $i < 3 ; $i++) { 
+            $letras .= chr(rand(65,90));
+        }
+        $numeros = rand(1000,9999);
+        return $letras . $numeros;
+    }
 ?>
