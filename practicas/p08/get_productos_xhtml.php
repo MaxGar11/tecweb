@@ -23,7 +23,6 @@
         // SE CREA EL OBJETO DE CONEXION
         @$link = new mysqli('localhost', 'root', '', 'marketzone');
         
-        // comprobar la conexión
         if ($link->connect_errno) {
             die('Fallo en la conexión '.$link->connect_error.'<br/>');
         }
@@ -31,7 +30,6 @@
         // Consulta a la base de datos
         if ($result = $link->query("SELECT * FROM productos WHERE unidades <= $tope")) {
             if($result->num_rows > 0) {
-                // Mostrar tabla con los productos
                 echo '
                 <table class="table">
                     <thead class="thead-dark">
@@ -48,7 +46,6 @@
                     </thead>
                     <tbody>';
 
-                // Recorremos cada registro obtenido de la consulta
                 while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
                     echo '
                     <tr>
@@ -67,14 +64,13 @@
                     </tbody>
                 </table>';
             } else {
-                echo '<p>No se existen productos con unidades menores o iguales a ' . $tope . '.</p>';
+                echo '<p>No existen productos con unidades menores o iguales a ' . $tope . '.</p>';
             }
 
-            // Liberar el resultado
             $result->free();
         }
 
-        // Cerrar la conexión
+        // Cerrar conexión
         $link->close();
     }
     ?>
