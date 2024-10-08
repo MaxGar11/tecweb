@@ -10,18 +10,18 @@
 <body>
     <h1>Registro de producto</h1>
 
-    <form id="miFormulario" action="update_producto.php" method="post">
+    <form id="formularioProductos" action="http://localhost/tecweb/practicas/p10/update_producto.php" method="post">
     <fieldset>
         <legend>Información del Producto</legend>
         <ul>
         <input type="hidden" name="id" value="<?= htmlspecialchars($_GET['id']); ?>">
         <li>
-                <label>Nombre del producto:</label>
-                <input type="text" name="nombre" value="<?= isset($_GET['nombre']) ? htmlspecialchars($_GET['nombre']) : ''; ?>">
+                <label for="form-name">Nombre del producto:</label>
+                <input id="form-name" type="text" name="nombre_producto" value="<?= isset($_GET['nombre']) ? htmlspecialchars($_GET['nombre']) : ''; ?>">
             </li>
             <li>
-                <label>Marca:</label>
-                <select name="marca" required>
+                <label for="form-marca">Marca:</label>
+                <select name="marca_producto" id="form-marca" required>
                     <option value="">Selecciona una marca</option>
                     <option value="Paco Rabanne" <?= (isset($_GET['marca']) && $_GET['marca'] == 'Paco Rabanne') ? 'selected' : ''; ?>>Paco Rabanne</option>
                     <option value="Jean-Paul-G" <?= (isset($_GET['marca']) && $_GET['marca'] == 'Jean-Paul-G') ? 'selected' : ''; ?>>Jean Paul Gaultier</option>
@@ -32,24 +32,24 @@
                 </select>
             </li>
             <li>
-                <label>Modelo:</label>
-                <input type="text" name="modelo" value="<?= isset($_GET['modelo']) ? htmlspecialchars($_GET['modelo']) : ''; ?>">
+                <label for="form-modelo">Modelo:</label>
+                <input type="text" id="form-modelo" name="modelo" value="<?= isset($_GET['modelo']) ? htmlspecialchars($_GET['modelo']) : ''; ?>">
             </li>
             <li>
-                <label>Precio:</label>
-                <input type="number" step="0.01" name="precio" value="<?= isset($_GET['precio']) ? htmlspecialchars($_GET['precio']) : ''; ?>">
+                <label for="form-precio">Precio:</label>
+                <input type="number" id="form-precio" step="0.01" name="precio" value="<?= isset($_GET['precio']) ? htmlspecialchars($_GET['precio']) : ''; ?>">
             </li>
             <li>
-                <label>Unidades:</label>
-                <input type="number" name="unidades" value="<?= isset($_GET['unidades']) ? htmlspecialchars($_GET['unidades']) : ''; ?>">
+                <label for="form-unid">Unidades:</label>
+                <input type="number" id="form-unid" name="unidades" value="<?= isset($_GET['unidades']) ? htmlspecialchars($_GET['unidades']) : ''; ?>">
             </li>
             <li>
-                <label>Detalles:</label>
-                <textarea name="detalles" maxlength="250"><?= isset($_GET['detalles']) ? htmlspecialchars($_GET['detalles']) : ''; ?></textarea>
+                <label for="form-detalle">Detalles:</label>
+                <textarea id="form-detalle" name="detalles" maxlength="250"><?= isset($_GET['detalles']) ? htmlspecialchars($_GET['detalles']) : ''; ?></textarea>
             </li>
             <li>
-                <label>Imagen:</label>
-                <input type="text" name="imagen" value="<?= isset($_GET['imagen']) ? htmlspecialchars($_GET['imagen']) : ''; ?>">
+                <label for="form-img">Imagen:</label>
+                <input type="text" id="form-img" name="imagen" value="<?= isset($_GET['imagen']) ? htmlspecialchars($_GET['imagen']) : ''; ?>">
             </li>
         </ul>
         <p>
@@ -119,7 +119,7 @@
         }
 
         // Verificar Unidades
-        if (document.getElementById("form-unid").value <= 0 || document.getElementById("form-unid").value === "") {
+        if (document.getElementById("form-unid").value < 0 || document.getElementById("form-unid").value === "") {
           alert("Debes introducir una cantidad válida de unidades");
           valid = false;
         }
