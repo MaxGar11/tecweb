@@ -112,6 +112,61 @@ function getXMLHttpRequest() {
     return objetoAjax;
 }
 
+function buscarProducto(e) {
+    /**
+     * Revisar la siguiente información para entender porqué usar event.preventDefault();
+     * http://qbit.com.mx/blog/2013/01/07/la-diferencia-entre-return-false-preventdefault-y-stoppropagation-en-jquery/#:~:text=PreventDefault()%20se%20utiliza%20para,escuche%20a%20trav%C3%A9s%20del%20DOM
+     * https://www.geeksforgeeks.org/when-to-use-preventdefault-vs-return-false-in-javascript/
+     */
+    e.preventDefault();
+
+    // SE OBTIENE LA MARCA A BUSCAR
+    var marca = document.getElementById('searchmarca').value;
+
+    console.log("Marca: " + marca);
+
+    // SE CREA EL OBJETO DE CONEXIÓN ASÍNCRONA AL SERVIDOR
+    var client = getXMLHttpRequest();
+    client.open('POST', './backend/read.php', true);
+    client.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    client.onreadystatechange = function () {
+        // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
+        if (client.readyState == 4 && client.status == 200) {
+            console.log('[CLIENTE]\n'+client.responseText);
+            
+            // SE OBTIENE EL OBJETO DE DATOS A PARTIR DE UN STRING JSON
+            let productos = JSON.parse(client.responseText);    // similar a eval('('+client.responseText+')');
+            
+            if (Array.isArray(productos) && productos.length > 0) {
+                // SE CREA UNA LISTA HTML CON LA DESCRIPCIÓN DEL PRODUCTO
+                let template = '';
+                productos.forEach(producto => {
+                    let descripcion = '';
+                    descripcion += `<li>precio: ${producto.precio}</li>`;
+                    descripcion += `<li>unidades: ${producto.unidades}</li>`;
+                    descripcion += `<li>modelo: ${producto.modelo}</li>`;
+                    descripcion += `<li>marca: ${producto.marca}</li>`;
+                    descripcion += `<li>detalles: ${producto.detalles}</li>`;
+                    
+                    // SE CREA UNA PLANTILLA PARA CREAR LA FILA A INSERTAR EN EL DOCUMENTO HTML
+                    template += `
+                        <tr>
+                            <td>${producto.id}</td>
+                            <td>${producto.nombre}</td>
+                            <td><ul>${descripcion}</ul></td>
+                        </tr>
+                    `;
+                });
+
+                // SE INSERTA LA PLANTILLA EN EL ELEMENTO CON marca "productos"
+                document.getElementById("productos").innerHTML = template;
+            }
+        }
+        
+    };
+    client.send("marca=" + marca);
+}
+
 function init() {
     /**
      * Convierte el JSON a string para poder mostrarlo
