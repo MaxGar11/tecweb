@@ -312,8 +312,8 @@ $(document).ready(function () {
           ContentType: 'application/json',
           data: JSON.stringify(finalProductData),
           success: function(response) {
-            console.log(response);
               ListaProductos();
+              console.log(response);
               let message = JSON.parse(response);
               let template = '';
               template = `<p>${message.message}</p>`;
@@ -360,6 +360,7 @@ $(document).ready(function () {
     url: "backend/product-list.php",
     type: "GET",
     success: function (response) {
+      console.log(response);
       let products = JSON.parse(response);
       let template = "";
       products.forEach((product) => {

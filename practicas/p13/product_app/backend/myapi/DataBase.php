@@ -20,7 +20,7 @@
         // Método para obtener el contenido de response como un string JSON
         public function getData() {
             
-        return json_encode($this->data, JSON_PRETTY_PRINT);
+            return json_encode($this->data, JSON_PRETTY_PRINT);
         }
     }
 

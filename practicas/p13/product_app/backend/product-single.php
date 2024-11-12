@@ -1,6 +1,6 @@
 <?php
 
-    require_once __DIR__.'/backend/vendor/autoload.php';
+    require_once __DIR__.'/vendor/autoload.phpp';
 
     $productos = new MYAPI\Read\Read('marketzone');
     $productos->single( $_POST['id'] );
