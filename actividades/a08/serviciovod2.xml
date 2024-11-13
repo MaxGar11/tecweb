@@ -1,0 +1,39 @@
+<catalogovod>
+    <cuenta correo="grmax_101@outlook.com">
+        <perfiles>
+            <perfil usuario="Max_131" idioma="Spanish"/>
+            <perfil usuario="Andy_.21" idioma="English"/>
+        </perfiles>
+    </cuenta>
+
+    <contenido>
+        <peliculas>
+            <genero nombre="Terror">
+                <titulo duracion="01:18:00">REC</titulo>
+                <titulo duracion="01:30:00">Brightburn: hijo de la oscuridad</titulo>
+                <titulo duracion="02:18:00">Terrifier 2</titulo>
+                <titulo duracion="01:34:00">Hostal</titulo>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo duracion="01:41:00">Son como niños 2</titulo>
+                <titulo duracion="01:42:00">Mi abuelo es un peligro</titulo>
+                <titulo duracion="01:46:00">Ted</titulo>
+                <titulo duracion="01:53:00">No te metas con Zohan</titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Sitcom">
+                <titulo duracion="00:24:00">The Office</titulo>
+                <titulo duracion="00:20:00">Friends</titulo>
+                <titulo duracion="00:20:00">How I Meet Your Mother</titulo>
+                <titulo duracion="00:22:00">Brooklyn Nine-Nine</titulo>
+            </genero>
+            <genero nombre="Anime">
+                <titulo duracion="00:25:00">Kuroko No Basket</titulo>
+                <titulo duracion="00:23:00">Jujutsu Kaisen</titulo>
+                <titulo duracion="00:24:00">Boku No Hero Academia</titulo>
+                <titulo duracion="00:24:00">Fire Force</titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogovod>

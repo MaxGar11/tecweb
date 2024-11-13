@@ -1,0 +1,98 @@
+<catalogovod>
+    <cuenta>
+        <correo>grmax_101@outlook.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>Max_131</usuario>
+                <idioma>Spanish</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Andy_.21</usuario>
+                <idioma>English</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>Terror</nombre>
+                <titulo>
+                    REC
+                    <duracion>01:18:00</duracion>
+                </titulo>
+                <titulo>
+                    Brightburn: hijo de la oscuridad
+                    <duracion>01:30:00</duracion>
+                </titulo>
+                <titulo>
+                    Terrifier 2
+                    <duracion>02:18:00</duracion>
+                </titulo>
+                <titulo>
+                    Hostal
+                    <duracion>01:34:00</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Comedia</nombre>
+                <titulo>
+                    Son como niños 2
+                    <duracion>01:41:00</duracion>
+                </titulo>
+                <titulo>
+                    Mi abuelo es un peligro
+                    <duracion>01:42:00</duracion>
+                </titulo>
+                <titulo>
+                    Ted
+                    <duracion>01:46:00</duracion>
+                </titulo>
+                <titulo>
+                    No te metas con Zohan
+                    <duracion>01:53:00</duracion>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>Sitcom</nombre>
+                <titulo>
+                    The Office
+                    <duracion>00:24:00</duracion>
+                </titulo>
+                <titulo>
+                    Friends
+                    <duracion>00:20:00</duracion>
+                </titulo>
+                <titulo>
+                    How I Meet Your Mother
+                    <duracion>00:20:00</duracion>
+                </titulo>
+                <titulo>
+                    Brooklyn Nine-Nine
+                    <duracion>00:22:00</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Anime</nombre>
+                <titulo>
+                    Kuroko No Basket
+                    <duracion>00:25:00</duracion>
+                </titulo>
+                <titulo>
+                    Jujutsu Kaisen
+                    <duracion>00:23:00</duracion>
+                </titulo>
+                <titulo>
+                    Boku No Hero Academia
+                    <duracion>00:24:00</duracion>
+                </titulo>
+                <titulo>
+                    Fire Force
+                    <duracion>00:24:00</duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogovod>
